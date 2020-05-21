@@ -32,9 +32,9 @@ function showMainRep(){
   }
 }
 
-function showArtemis() {
+function showArtemis(title, author, publisher, isbn, pages, gRating, mRating) {
   //var arrayPick = 0;
-  function replace0(){
+  function replace0(title, author, publisher, isbn, pages, gRating, mRating){
     title.innerHTML= rootArray [0] [0];
     author.innerHTML= rootArray [0] [1];
     publisher.innerHTML= rootArray [0] [2];
@@ -56,6 +56,6 @@ function showAnna() {
     pages.innerHTML= rootArray [1] [4];
     gRating.innerHTML= rootArray [1] [5];
     mRating.innerHTML= rootArray [1] [6];
-  };
+  }
   showMainRep();
 }
