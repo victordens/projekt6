@@ -14,6 +14,10 @@
     <title></title>
   </head>
   <body>
+
+  <header class="header-class">
+    iam  a big fat navigationbar
+  </header>
 <div class="header-for-overview">
 <div class="titleO">
   <h1>Resource overview</h1>
@@ -21,11 +25,17 @@
 
 <div class="settings">
 
+<div class="view-all">
+  <p>View all resources</p> <i class="fas fa-toggle-off"></i>
+
+</div>
 
 
-  <p>View all resources</p>
-
+<div class="cal-view">
   <p>Calender view</p>
+  <i class="fas fa-calendar-alt"></i>
+</div>
+
 
 
   <div class="entries-wrapper">
@@ -45,6 +55,7 @@
 
 <div class="search-wrapper">
 <input id="search-input" class="form-control" type="text" name="" value="">
+<i class="fas fa-search"></i>
 </div>
 
 
@@ -55,9 +66,14 @@
 <div class="table-wrapper">
   <table class="table table-striped">
       <tr  class="bg-info">
-          <th  class="bg-info" data-colname="name" data-order="desc">Name &#9650;</th>
-          <th  data-colname="age" data-order="desc">Age &#9650;</th>
-          <th  data-colname="birthdate" data-order="desc">Birthday &#9650;</th>
+          <th  class="bg-info" data-colname="id" data-order="desc">ID &#9650;</th>
+          <th  data-colname="name" data-order="desc">Name &#9650;</th>
+          <th  data-colname="yours" data-order="desc">Your resource &#9650;</th>
+          <th  data-colname="in" data-order="desc"> In service &#9650;</th>
+          <th  data-colname="next" data-order="desc"> Next service &#9650;</th>
+          <th  data-colname="last" data-order="desc"> Last service &#9650;</th>
+          <th  data-colname="rtype" data-order="desc">Resource type &#9650;</th>
+          <th  data-colname="type" data-order="desc">Type &#9650;</th>
       </tr>
       <tbody id="myTable">
 

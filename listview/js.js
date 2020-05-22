@@ -1,11 +1,15 @@
 //This is my array of machines
 var myArray = [
-    {'name':'<span onclick="show48()">48</span>', 'age':'30', 'birthdate':'11/10/1989'},
-    {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
-    {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
-    {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
-    {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
-    {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+{'id':'<span class="array-span" onclick="show037()">037</span>', 'name':'Bottero Lamilinea 734 Avl', 'Resource':'yes', 'service':'yes', 'next':'3 days ago', 'last':'17-01-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show001()">001</span>', 'name':'Graham steam tunnel Z3271', 'Resource':'yes', 'service':'yes', 'next':'2 hours', 'last':'16-02-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show055()">055</span>', 'name':'ANDERSON STRATOS', 'Resource':'yes', 'service':'yes', 'next':'in 4 hours', 'last':'30-01-2020', 'rtype':'machine', 'type':'preventive'},
+{'id':'<span class="array-span" onclick="show048()">048</span>', 'name':'TRUMPF 3530', 'Resource':'yes', 'service':'yes', 'next':'in 2 days', 'last':'30-01-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show024()">024</span>', 'name':'Reggiani Unica Rotary Printing Machine', 'Resource':'yes', 'service':'no', 'next':'in 3 days', 'last':'29-10-2019', 'rtype':'machine', 'type':'preventive'},
+{'id':'<span class="array-span" onclick="show132()">132</span>', 'name':'KOCH COMPAC', 'Resource':'yes', 'service':'no', 'next':'in 5 days', 'last':'29-02-2020', 'rtype':'machine', 'type':'preventive'},
+{'id':'<span class="array-span" onclick="show017()">017</span>', 'name':'Mono FG158', 'Resource':'yes', 'service':'no', 'next':'in 6 days', 'last':'02-03-2020', 'rtype':'machine', 'type':'preventive'},
+{'id':'<span class="array-span" onclick="show101()">101</span>', 'name':'Urschel GK-A', 'Resource':'yes', 'service':'no', 'next':'in 14 days', 'last':'04-03-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show012()">012</span>', 'name':'Nilma DS/3', 'Resource':'yes', 'service':'no', 'next':' in 3 months', 'last':'23-05-2020', 'rtype':'machine', 'type':'preventive'},
+{'id':'<span class="array-span" onclick="show003()">003</span>', 'name':'BRANDT KD 97 C', 'Resource':'yes', 'service':'no', 'next':'in 6 months', 'last':'27-05-2020', 'rtype':'machine', 'type':'preventive'},
 ]
 
 //This is were i find and define my search input and tells it that on key up do this function.
@@ -71,14 +75,26 @@ function buildTable(data){
     var table = document.getElementById('myTable')
     table.innerHTML = ''
     for (var i = 0; i < data.length; i++){
+        var colid = `id-${i}`
         var colname = `name-${i}`
-        var colage = `age-${i}`
-        var colbirth = `birth-${i}`
+        var colyours = `yours-${i}`
+        var colin = `in-${i}`
+        var colnext = `next-${i}`
+        var collast = `last-${i}`
+        var colrtype = `rtype-${i}`
+        var coltype = `type-${i}`
 
         var row = `<tr>
+                        <td>${data[i].id}</td>
                         <td>${data[i].name}</td>
-                        <td>${data[i].age}</td>
-                        <td>${data[i].birthdate}</td>
+                        <td>${data[i].Resource}</td>
+                        <td>${data[i].service}</td>
+                        <td>${data[i].next}</td>
+                        <td>${data[i].last}</td>
+                        <td>${data[i].rtype}</td>
+                        <td>${data[i].type}</td>
+
+
                    </tr>`
         table.innerHTML += row
     }

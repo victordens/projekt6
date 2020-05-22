@@ -1,7 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 th{
     cursor: pointer;
     color:#457;
         }
+
+.header-class {
+  display: grid;
+  align-items: center;
+  height: 70px;
+  font-size: 40px;
+  background-color: #333;
+  color:green;
+}
+
 .header-for-overview {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -10,13 +24,25 @@ th{
 
 .settings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.view-all{
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) 1fr;
+  align-items: center;
+}
+
+.cal-view {
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) 1fr;
   align-items: center;
 }
 
 .entries-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
   align-items: center;
 }
 
