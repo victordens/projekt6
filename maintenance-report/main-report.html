@@ -3,25 +3,106 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="main-report.css">
   </head>
   <body>
-    <button type="button" name="artemis" id="artemis" onclick="showArtemis()">Artemis</button>
-    <button type="button" name="annaKerinina" onclick="showAnna()">Anna Karenina</button>
+    <div class="btn-div">
+      <span onclick="show48()">machine 1</span>
+      <span onclick="ma2()">machine 2</span>
+      <span onclick="ma3()">machine 3</span>
+      <span onclick="ma4()">machine 4</span>
+    </div>
     <div id="template">
-      <h2>book title: <span id="replaceT"></span></h2>
-      <h3>author: <span id="replaceA"></span></h3>
-      <h3>publisher: <span id="replacePu"></span></h3>
-      <h3>ISBN number: <span id="replaceI"></span></h3>
-      <p>Pages: <span id="replacePa"></span></p>
-      <p>Goodreads rating: <span id="replaceG"></span></p>
-      <p>My rating: <span id="replaceM"></span></p>
+      <div class="report-header">
+        <h2>ID: <span id="rId"></span></h2>
+        <h2 id="rName">name</h2>
+        <div id="toggleHis">
+          toggle
+        </div>
+        <div id="close-report" onclick="close-report()">
+          x
+        </div>
+      </div>
+      <div class="todo-wrapper">
+        <div class="basic-info">
+          <h3>Service</h3>
+          <h3>supervisor</h3>
+          <h3>workers</h3>
+          <h3>Files</h3>
+          <p id="rService"></p>
+          <p id="rSuper"></p>
+          <p id="rWorkers"></p>
+          <p id="rFiles"></p>
+        </div>
+        <div class="description">
+          <h3>description</h3>
+          <p></p>
+        </div>
+        <div class="checklist">
+          <h3>Checklist</h3>
+        </div>
+        <div class="comm-add">
+          <div class="comment">
+            <h3>Comment</h3>
+            <textarea name="comment" rows="8" cols="80"></textarea>
+          </div>
+          <div class="files">
+            <h3>Add Files/Photos</h3>
+            <div class="addFiles">
 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="his-wrapper">
+        <table>
+          <tr>
+            <th>Date of Service</th>
+            <th>Worker</th>
+            <th>Task completion</th>
+            <th>documentation</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="hidden">
+        default
+      </div>
     </div>
-    <div id="arrayCounter">
-test
-    </div>
-    <script src="main-report.js">
-
-    </script>
   </body>
 </html>
