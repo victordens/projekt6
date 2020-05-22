@@ -1,9 +1,9 @@
 //This is my array of machines
 var myArray = [
 {'id':'<span class="array-span" onclick="show037()">037</span>', 'name':'Bottero Lamilinea 734 Avl', 'Resource':'yes', 'service':'yes', 'next':'3 days ago', 'last':'17-01-2020', 'rtype':'machine', 'type':'predictive'},
-{'id':'<span class="array-span" onclick="show001()">001</span>', 'name':'Graham steam tunnel Z3271', 'Resource':'yes', 'service':'yes', 'next':'2 hours', 'last':'16-02-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show001()">001</span>', 'name':'Graham steam tunnel Z3271', 'Resource':'yes', 'service':'yes', 'next':'in 2 hours', 'last':'16-02-2020', 'rtype':'machine', 'type':'predictive'},
 {'id':'<span class="array-span" onclick="show055()">055</span>', 'name':'ANDERSON STRATOS', 'Resource':'yes', 'service':'yes', 'next':'in 4 hours', 'last':'30-01-2020', 'rtype':'machine', 'type':'preventive'},
-{'id':'<span class="array-span" onclick="show048()">048</span>', 'name':'TRUMPF 3530', 'Resource':'yes', 'service':'yes', 'next':'in 2 days', 'last':'30-01-2020', 'rtype':'machine', 'type':'predictive'},
+{'id':'<span class="array-span" onclick="show048()">048</span>', 'name':'TRUMPF 3530', 'Resource':'yes', 'service':'no', 'next':'in 2 days', 'last':'30-01-2020', 'rtype':'machine', 'type':'predictive'},
 {'id':'<span class="array-span" onclick="show024()">024</span>', 'name':'Reggiani Unica Rotary Printing Machine', 'Resource':'yes', 'service':'no', 'next':'in 3 days', 'last':'29-10-2019', 'rtype':'machine', 'type':'preventive'},
 {'id':'<span class="array-span" onclick="show132()">132</span>', 'name':'KOCH COMPAC', 'Resource':'yes', 'service':'no', 'next':'in 5 days', 'last':'29-02-2020', 'rtype':'machine', 'type':'preventive'},
 {'id':'<span class="array-span" onclick="show017()">017</span>', 'name':'Mono FG158', 'Resource':'yes', 'service':'no', 'next':'in 6 days', 'last':'02-03-2020', 'rtype':'machine', 'type':'preventive'},
@@ -73,6 +73,7 @@ for ( var i = 0; i < data.length; i++){
 
 function buildTable(data){
     var table = document.getElementById('myTable')
+
     table.innerHTML = ''
     for (var i = 0; i < data.length; i++){
         var colid = `id-${i}`
@@ -98,4 +99,23 @@ function buildTable(data){
                    </tr>`
         table.innerHTML += row
     }
+}
+
+
+if ($(window).width() < 400) {
+$("#desktopwrapper").hide();
+}
+else {
+   alert('More than 400');
+
+
+}
+
+if ($(window).width() > 400) {
+$("#mobilewrapper").hide();
+}
+else {
+   alert('Less than 400');
+
+
 }
