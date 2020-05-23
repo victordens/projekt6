@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f47fcebf42.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="listoverview.css">
+
+    <!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <header class="header-class">
+    iam  a big fat navigationbar
+  </header>
+
+<div id="mobilewrapper" class="mobilewrapper">
+
+  <div class="header-for-overview">
+  <div class="titleO">
+
+    <h1>Resource overview - Mobile</h1>
+  </div>
+</div>
+
+  <p>View all</p> <i class="fas fa-toggle-off"></i>
+  <i class="fas fa-calendar-alt"></i>
+  <input id="search-mobile" class="search-mobile" type="text" name="" value="">
+  <i class="fas fa-search"></i>
+
+<div class="machinelist">
+  <div class="id037">
+  <h2 class="mobile-title">037 Bottero Lamilinea 734 Avl</h2>
+    <i onclick='show037' class="fas fa-tasks" ></i>
+
+    <div class="dates">
+      <p class="mobile-next">3 days ago</p>
+      <p class="mobile-last">17-01-2020</p>
+    </div>
+
+    <div class="img-machine">
+    <img src="machine.svg" alt="">
+      </div>
+    <div class="icon-mobile">
+      <i class="fas fa-wrench"></i>
+      <i class="fas fa-chart-bar"></i>
+    </div>
+  </div>
+
+  <div class="id001">
+  <h2 class="mobile-title2">001 Graham steam tunnel Z3271</h2>
+    <i onclick='show037' class="fas fa-tasks" ></i>
+
+    <div class="dates">
+      <p class="mobile-next">In 2 hours</p>
+      <p class="mobile-last">16-02-2020</p>
+    </div>
+
+    <div class="img-machine">
+    <img src="machine.svg" alt="">
+      </div>
+    <div class="icon-mobile">
+      <i class="fas fa-wrench"></i>
+      <i class="fas fa-chart-bar"></i>
+    </div>
+  </div>
+
+  <div class="id055">
+  <h2 class="mobile-title">055 ANDERSON STRATOS</h2>
+    <i onclick='show037' class="fas fa-tasks" ></i>
+
+    <div class="dates">
+      <p class="mobile-next">In 4 hours</p>
+      <p class="mobile-last">30-01-2020</p>
+    </div>
+
+    <div class="img-machine">
+    <img src="machine.svg" alt="">
+      </div>
+    <div class="icon-mobile">
+      <i class="fas fa-wrench"></i>
+      <i class="fas fa-clock"></i>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div id="desktopwrapper" class="desktopewrapper">
+<div class="header-for-overview">
+<div class="titleO">
+  <h1>Resource overview</h1>
+</div>
+
+<div class="settings">
+
+<div class="view-all">
+  <p>View all resources</p> <i class="fas fa-toggle-off"></i>
+
+</div>
+
+
+<div class="cal-view">
+  <p>Calender view</p>
+  <i class="fas fa-calendar-alt"></i>
+</div>
+
+
+
+  <div class="entries-wrapper">
+    <p>Show</p>
+        <select class="" name="">
+
+        </select>
+    <p>entries</p>
+  </div>
+<div class="resource-wrapper">
+  <p>Resource Type</p>
+  <select class="show" name="">
+    <p>1</p>
+  </select>
+
+</div>
+
+<div class="search-wrapper">
+<input id="search-input" class="form-control" type="text" name="" value="">
+<i class="fas fa-search"></i>
+</div>
+
+
+</div>
+
+</div>
+
+<div class="table-wrapper">
+  <table id="table1" class="table table-striped">
+      <tr  class="bg-info">
+          <th  class="bg-info" data-colname="id" data-order="desc">ID &#9650;</th>
+          <th  data-colname="name" data-order="desc">Name &#9650;</th>
+          <th  data-colname="yours" data-order="desc">Your resource &#9650;</th>
+          <th  data-colname="in" data-order="desc"> In service &#9650;</th>
+          <th  data-colname="next" data-order="desc"> Next service &#9650;</th>
+          <th  data-colname="last" data-order="desc"> Last service &#9650;</th>
+          <th  data-colname="rtype" data-order="desc">Resource type &#9650;</th>
+          <th  data-colname="type" data-order="desc">Type &#9650;</th>
+      </tr>
+      <tbody id="myTable">
+
+      </tbody>
+  </table>
+
+</div>
+</div>
+
+
+
+
+    <script src="js.js" charset="utf-8"></script>
+  </body>
+</html>
