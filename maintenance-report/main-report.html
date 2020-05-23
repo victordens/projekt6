@@ -1,108 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="main-report.css">
-  </head>
-  <body>
-    <div class="btn-div">
-      <span onclick="show48()">machine 1</span>
-      <span onclick="ma2()">machine 2</span>
-      <span onclick="ma3()">machine 3</span>
-      <span onclick="ma4()">machine 4</span>
-    </div>
-    <div id="template">
-      <div class="report-header">
-        <h2>ID: <span id="rId"></span></h2>
-        <h2 id="rName">name</h2>
-        <div id="toggleHis">
-          toggle
-        </div>
-        <div id="close-report" onclick="close-report()">
-          x
-        </div>
-      </div>
-      <div class="todo-wrapper">
-        <div class="basic-info">
-          <h3>Service</h3>
-          <h3>supervisor</h3>
-          <h3>workers</h3>
-          <h3>Files</h3>
-          <p id="rService"></p>
-          <p id="rSuper"></p>
-          <p id="rWorkers"></p>
-          <p id="rFiles"></p>
-        </div>
-        <div class="description">
-          <h3>description</h3>
-          <p></p>
-        </div>
-        <div class="checklist">
-          <h3>Checklist</h3>
-        </div>
-        <div class="comm-add">
-          <div class="comment">
-            <h3>Comment</h3>
-            <textarea name="comment" rows="8" cols="80"></textarea>
-          </div>
-          <div class="files">
-            <h3>Add Files/Photos</h3>
-            <div class="addFiles">
 
-            </div>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="main-report.css">
+  <script src="main-report.js" defer></script>
+  <script src="main-report-checklist.js" defer></script>
+  <script src="main-report-his.js" defer>
+
+  </script>
+</head>
+
+<body>
+  <div class="btn-div">
+    <span id="048">TRUMPF 3530</span>
+    <span id="037">Bottero Lamilinea 734 Avl</span>
+    <span id="101">Urschel GK-A</span>
+    <span id="024">Reggiani Unica Rotary Printing Machine</span>
+    <span id="001">Graham steam tunnel Z3271</span>
+    <span id="017">Mono FG158</span>
+    <span id="012">Nilma DS/3</span>
+    <span id="132">KOCH COMPACT</span>
+    <span id="003">BRANDT KD 97 C</span>
+    <span id="055">ANDERSON STRATOS PRO</span>
+  </div>
+  <div id="template">
+    <div class="report-header">
+      <h2>ID: <span id="rId"></span></h2>
+      <h2 id="rName">name</h2>
+      <div id="toggleHis">
+        toggle
+      </div>
+      <div id="close-report">
+        x
+      </div>
+    </div>
+    <div class="todo-wrapper">
+      <div class="basic-info">
+        <h3>Service</h3>
+        <h3>supervisor</h3>
+        <h3>workers</h3>
+        <h3>Files</h3>
+        <p id="rService"></p>
+        <p id="rSuper"></p>
+        <p id="rWorkers"></p>
+        <p id="rFiles"></p>
+      </div>
+      <div class="description">
+        <h3>description</h3>
+        <p id="rDescription"></p>
+      </div>
+      <div id="checklist">
+        <h3>Checklist</h3>
+        <progress value="0" class="progressBar">0%</progress>
+        <div class="tasks">
+          <div class="task-div">
+            <label for="task1"></label>
+            <input id="task1" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task2"></label>
+            <input id="task2" type="checkbox" class="task">
+
+          </div>
+          <div class="task-div">
+            <label for="task3"></label>
+            <input id="task3" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task4"></label>
+            <input id="task4" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task5"></label>
+            <input id="task5" type="checkbox" class="task">
           </div>
         </div>
       </div>
-      <div class="his-wrapper">
-        <table>
-          <tr>
-            <th>Date of Service</th>
-            <th>Worker</th>
-            <th>Task completion</th>
-            <th>documentation</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-      <div id="hidden">
-        default
+      <div class="comm-add">
+        <div class="comment">
+          <h3>Comment</h3>
+          <textarea name="comment" rows="8" cols="80"></textarea>
+        </div>
+        <div class="files">
+          <h3>Add Files/Photos</h3>
+          <div class="addFiles">
+
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="his-wrapper">
+      <table>
+        <tr>
+          <th>Date of Service</th>
+          <th>Worker</th>
+          <th>Task completion</th>
+          <th>documentation</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="hidden" class="d-none">
+      default
+    </div>
+  </div>
+</body>
+
 </html>

@@ -1,3 +1,6 @@
+#template {
+
+}
 .todo-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,4 +19,19 @@
 .report-header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.checklist {
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.his-wrapper {
+  display: none;
 }
