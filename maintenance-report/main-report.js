@@ -18,6 +18,7 @@ const service = document.getElementById("rService");
 const supervisor = document.getElementById("rSuper");
 const worker = document.getElementById("rWorkers");
 const description = document.getElementById("rDescription");
+const hisLastService= document.getElementById("hisLast");
 
 let mainRep = document.getElementById('template');
 
@@ -31,14 +32,15 @@ function replace() {
 
   id.innerHTML= reportArray [arrayPick] [0];
   name.innerHTML= reportArray [arrayPick] [1];
-  service.innerHTML= reportArray [arrayPick] [2] + reportArray [arrayPick] [3];
+  service.innerHTML= reportArray [arrayPick] [2] + "<br>" + reportArray [arrayPick] [3];
   supervisor.innerHTML= reportArray [arrayPick] [4];
   worker.innerHTML= reportArray [arrayPick] [5] [0] + "<br>" + reportArray [arrayPick] [5] [1] + "<br>" + reportArray [arrayPick] [5] [2];
   description.innerHTML= reportArray [arrayPick] [6];
+  hisLastService.innerHTML= reportArray [arrayPick] [3];
 }
 
 function showMainRep() {
-  let mainRep = document.getElementById('template');
+  let mainRep = document.getElementById("template");
   if (mainRep.style.display === "none") {
     mainRep.style.display = "block";
   }
@@ -46,6 +48,9 @@ function showMainRep() {
     mainRep.style.display = "block";
     mainRep.style.visibility = "visible";
 
+  }
+  if (mainRep.hidden === "true") {
+    mainRep.hidden = "false";
   }
 }
 

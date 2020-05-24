@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="main-report.css">
+
   <script src="main-report.js" defer></script>
   <script src="main-report-checklist.js" defer></script>
   <script src="main-report-his.js" defer>
+
+  </script>
+  <script src="hide.js" defer>
 
   </script>
 </head>
@@ -48,7 +52,7 @@
         <p id="rFiles"></p>
       </div>
       <div class="description">
-        <h3>description</h3>
+        <h3>Description</h3>
         <p id="rDescription"></p>
       </div>
       <div id="checklist">
@@ -56,24 +60,24 @@
         <progress value="0" class="progressBar">0%</progress>
         <div class="tasks">
           <div class="task-div">
-            <label for="task1"></label>
+            <label for="task1">Run diagnostics</label>
             <input id="task1" type="checkbox" class="task">
           </div>
           <div class="task-div">
-            <label for="task2"></label>
+            <label for="task2">Clean exterior</label>
             <input id="task2" type="checkbox" class="task">
 
           </div>
           <div class="task-div">
-            <label for="task3"></label>
+            <label for="task3">Clean interior</label>
             <input id="task3" type="checkbox" class="task">
           </div>
           <div class="task-div">
-            <label for="task4"></label>
+            <label for="task4">Lubricate mechanisms</label>
             <input id="task4" type="checkbox" class="task">
           </div>
           <div class="task-div">
-            <label for="task5"></label>
+            <label for="task5">Change oil</label>
             <input id="task5" type="checkbox" class="task">
           </div>
         </div>
@@ -92,7 +96,7 @@
       </div>
     </div>
     <div class="his-wrapper">
-      <table>
+      <table id="his-table">
         <tr>
           <th>Date of Service</th>
           <th>Worker</th>
@@ -100,39 +104,33 @@
           <th>documentation</th>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="hisLast"></td>
+          <td>Klaus Stenstrup</td>
+          <td>100%</td>
           <td></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>01-11-2019</td>
+          <td>Hans E. Christensen</td>
+          <td>100%</td>
           <td></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>04-06-2019</td>
+          <td>Klaus Stenstrup</td>
+          <td>90%</td>
           <td></td>
         </tr>
         <tr>
+          <td>17-03-2019</td>
+          <td>Hans E. Christensen</td>
+          <td>100%</td>
           <td></td>
-          <td></td>
-          <td></td>
+        </tr>
+        <tr>
+          <td>06-12-2018</td>
+          <td>Lise Jørgensen</td>
+          <td>100%</td>
           <td></td>
         </tr>
       </table>
