@@ -56,7 +56,13 @@ function showMainRep() {
 
 document.getElementById("close-report").addEventListener("click", closeRep);
 function closeRep() {
-  mainRep.style.display = "none";
+    document.getElementById("task1").checked = false;
+    document.getElementById("task2").checked = false;
+    document.getElementById("task3").checked = false;
+    document.getElementById("task4").checked = false;
+    document.getElementById("task5").checked = false;
+    init();
+    mainRep.style.display = "none";
 }
 
 
