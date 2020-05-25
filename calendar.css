@@ -1,0 +1,149 @@
+
+.calendar-showing {
+
+  height: 100%;
+  width: 70vw;
+}
+
+.date-selectors {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.current-year {
+  display: inline-block;
+}
+
+button {
+  height: 10px;
+  width: 20px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 30px;
+  color: #fff;
+}
+
+.days {
+  background: #000;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.date-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 70vh;
+}
+
+.calendar-dates {
+  background: #99EEff;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.calendar-dates:hover {
+  background-color: #333;
+}
+
+#thisday {
+  background-color: lightgreen;
+}
+
+.machinebox {
+  background: red;
+}
+
+
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.duenow {
+  background: green;
+  width: 30%;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.duesoon {
+  background: yellow;
+  width: 30%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.overdue {
+  background: red;
+  width: 30%;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.duelong {
+  background: #005599;
+  width: 30%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+h5 {
+text-align: center;
+margin: 5px;
+}
+
+
+
+.mydatebox {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.datecontent {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closedate {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closedate:hover,
+.closedate:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.machines {
+  border-color: #000;
+}
