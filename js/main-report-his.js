@@ -16,3 +16,17 @@ function showHis() {
     checklistOverlay.style.display = "block"
   }
 }
+
+let calendarView = document.getElementsByClassName("calendar-showing");
+let calBtn = document.getElementsByClassName("cal-view");
+
+calBtn[0].addEventListener("click", toggleCal);
+
+function toggleCal () {
+  if (calendarView[0].style.display === "none") {
+    calendarView[0].style.display = "block";
+  }
+  else {
+    calendarView[0].style.display = "none";
+  }
+}

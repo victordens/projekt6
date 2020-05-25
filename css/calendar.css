@@ -1,8 +1,12 @@
 
 .calendar-showing {
-  display: ;
+  display: none;
   height: 100%;
-  width: 70vw;
+  width: 75%;
+  position: absolute;
+  top: 170px;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .date-selectors {
