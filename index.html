@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/f47fcebf42.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="css/listoverview.css">
+  <link rel="stylesheet" href="css/main-report.css">
+  <link rel="stylesheet" href="css/modal2.css">
+  <script src="js/main-report.js" defer></script>
+
+  <script src="js/main-report-his.js" defer></script>
+  <script src="js/hide.js" defer></script>
+  <script defer src="js/modalscript2.js"></script>
+  <link rel="stylesheet" href="css/calendar.css">
+  <script src="js/calendar.js" defer></script>
+
+  <!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <header class="header-class">
+    iam a big fat navigationbar
+  </header>
+
+  <div id="mobilewrapper" class="mobilewrapper">
+
+    <div class="header-for-overview">
+      <div class="titleO">
+
+        <h1>Resource overview - Mobile</h1>
+      </div>
+    </div>
+
+    <p>View all</p> <i class="fas fa-toggle-off"></i>
+    <i class="fas fa-calendar-alt"></i>
+    <input id="search-mobile" class="search-mobile" type="text" name="" value="">
+    <i class="fas fa-search"></i>
+
+    <div class="machinelist">
+      <div class="id037">
+        <h2 class="mobile-title">037 Bottero Lamilinea 734 Avl</h2>
+        <i onclick='show037' class="fas fa-tasks"></i>
+
+        <div class="dates">
+          <p class="mobile-next">3 days ago</p>
+          <p class="mobile-last">17-01-2020</p>
+        </div>
+
+        <div class="img-machine">
+          <img src="media/machine.svg" alt="">
+        </div>
+        <div class="icon-mobile">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-chart-bar"></i>
+        </div>
+      </div>
+
+      <div class="id001">
+        <h2 class="mobile-title2">001 Graham steam tunnel Z3271</h2>
+        <i onclick='show037' class="fas fa-tasks"></i>
+
+        <div class="dates">
+          <p class="mobile-next">In 2 hours</p>
+          <p class="mobile-last">16-02-2020</p>
+        </div>
+
+        <div class="img-machine">
+          <img src="media/machine.svg" alt="">
+        </div>
+        <div class="icon-mobile">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-chart-bar"></i>
+        </div>
+      </div>
+
+      <div class="id055">
+        <h2 class="mobile-title">055 ANDERSON STRATOS</h2>
+        <i id="055m" class="fas fa-tasks"></i>
+
+        <div class="dates">
+          <p class="mobile-next">In 4 hours</p>
+          <p class="mobile-last">30-01-2020</p>
+        </div>
+
+        <div class="img-machine">
+          <img src="media/machine.svg" alt="">
+        </div>
+        <div class="icon-mobile">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-clock"></i>
+        </div>
+      </div>
+
+      <div class="id048">
+        <h2 class="mobile-title">048 TRUMPF 3530</h2>
+        <i id="048m" class="fas fa-tasks"></i>
+
+        <div class="dates">
+          <p class="mobile-next">In 2 days</p>
+          <p class="mobile-last">30-01-2020</p>
+        </div>
+
+        <div class="img-machine">
+          <img src="media/machine.svg" alt="">
+        </div>
+        <div class="icon-mobile">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-chart-bar"></i>
+        </div>
+      </div>
+
+      <div class="id024">
+        <h2 class="mobile-title">024 Reggiani Unica Rotary Printing Machine </h2>
+        <i id="024m" class="fas fa-tasks"></i>
+
+        <div class="dates">
+          <p class="mobile-next">In 3 days</p>
+          <p class="mobile-last">29-10-2019</p>
+        </div>
+
+        <div class="img-machine">
+          <img src="media/machine.svg" alt="">
+        </div>
+        <div class="icon-mobile">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-clock"></i>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="desktopwrapper" class="desktopewrapper">
+    <div class="header-for-overview">
+      <div class="titleO">
+        <h1>Resource overview</h1>
+      </div>
+
+      <div class="settings">
+
+        <div class="view-all">
+          <p>View all resources</p> <i class="fas fa-toggle-off"></i>
+
+        </div>
+
+
+        <div class="cal-view">
+          <p>Calender view</p>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+
+
+
+        <div class="entries-wrapper">
+          <p>Show</p>
+          <select class="" name="">
+
+          </select>
+          <p>entries</p>
+        </div>
+        <div class="resource-wrapper">
+          <p>Resource Type</p>
+          <select class="show" name="">
+            <p>1</p>
+          </select>
+
+        </div>
+
+        <div class="search-wrapper">
+          <input id="search-input" class="form-control" type="text" name="" value="">
+          <i class="fas fa-search"></i>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="table-wrapper">
+      <table id="table1" class="table table-striped">
+        <tr class="bg-info">
+          <th class="bg-info" data-colname="id" data-order="desc">ID &#9650;</th>
+          <th data-colname="name" data-order="desc">Name &#9650;</th>
+          <th data-colname="yours" data-order="desc">Your resource &#9650;</th>
+          <th data-colname="in" data-order="desc"> In service &#9650;</th>
+          <th data-colname="next" data-order="desc"> Next service &#9650;</th>
+          <th data-colname="last" data-order="desc"> Last service &#9650;</th>
+          <th data-colname="rtype" data-order="desc">Resource type &#9650;</th>
+          <th data-colname="type" data-order="desc">Type &#9650;</th>
+        </tr>
+        <tbody id="myTable">
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+
+
+  <script src="js/main.js" charset="utf-8"></script>
+
+<!-- NOTE: Calendar view starter her -->
+
+<div class="calendar-showing">
+
+  <div class="date-selectors">
+
+    <div class="current-year">
+      <button name="previousyear" onclick="previousyear()"></button>
+      <p id="year"></p>
+      <button name="nextyear" onclick="nextyear()"></button>
+    </div>
+
+    <div class="current-month">
+      <button name="previousmonth" onclick="previousmonth()"></button>
+      <p id="month"></p>
+      <button name="nextmonth" type="button" onclick="nextmonth()"></button>
+    </div>
+
+  </div>
+
+
+  <div class="calendar-container">
+    <div class="calendar-days">
+      <div class="days">Monday</div>
+      <div class="days">Tuesday</div>
+      <div class="days">Wednesday</div>
+      <div class="days">Thursday</div>
+      <div class="days">Friday</div>
+      <div class="days">Saturday</div>
+      <div class="days">Sunday</div>
+    </div>
+
+  <div class="date-container">
+    <div class="calendar-dates">01</div>
+    <div class="calendar-dates">02</div>
+    <div class="calendar-dates">03</div>
+    <div class="calendar-dates">04</div>
+    <div class="calendar-dates">05</div>
+    <div class="calendar-dates">06</div>
+    <div class="calendar-dates">07</div>
+    <div class="calendar-dates">08</div>
+    <div class="calendar-dates">
+      <p>9</p>
+      <div class="overdue">
+        <h5>46</h5>
+      </div>
+    </div>
+    <div class="calendar-dates">10</div>
+
+
+    <div class="calendar-dates" id="thisday" ondblclick="dayinfo()">
+
+      <p>11</p>
+      <div class="duenow">
+        <h5>21</h5>
+
+      </div>
+      <div class="duenow">
+        <h5>18</h5>
+
+      </div>
+    </div>
+
+    <div class="calendar-dates">
+      <p>12</p>
+        <div class="duenow">
+          <h5>10</h5>
+
+        </div>
+        <div class="duesoon">
+          <h5>10</h5>
+
+        </div>
+        <div class="duesoon">
+          <h5>10</h5>
+
+        </div>
+        <div class="duesoon">
+          <h5>10</h5>
+
+        </div>
+       </div>
+    <div class="calendar-dates">13</div>
+    <div class="calendar-dates">14</div>
+    <div class="calendar-dates">
+      <p>15</p>
+      <div class="duelong">
+        <h5>13</h5>
+
+      </div>
+
+      <div class="duelong">
+        <h5>12</h5>
+
+      </div>
+     </div>
+    <div class="calendar-dates">
+      <p>16</p>
+      <div class="duelong">
+        <h5>14</h5>
+
+      </div>
+      <div class="duelong">
+        <h5>47</h5>
+
+      </div>
+     </div>
+    <div class="calendar-dates">
+      <p>17</p>
+      <div class="duelong">
+        <h5>367</h5>
+
+      </div>
+    </div>
+    <div class="calendar-dates">
+      <p>18</p>
+      <div class="duelong">
+        <h5>56</h5>
+
+      </div>
+      <div class="duelong">
+        <h5>01</h5>
+
+      </div>
+     </div>
+    <div class="calendar-dates">
+      <p>19</p>
+      <div class="duelong">
+        <h5>14</h5>
+
+      </div>
+      <div class="duelong">
+        <h5>47</h5>
+
+      </div>
+     </div>
+    <div class="calendar-dates">20</div>
+    <div class="calendar-dates">21</div>
+    <div class="calendar-dates">22</div>
+    <div class="calendar-dates">23</div>
+    <div class="calendar-dates">24</div>
+    <div class="calendar-dates">25</div>
+    <div class="calendar-dates">26</div>
+    <div class="calendar-dates">27</div>
+    <div class="calendar-dates">28</div>
+    <div class="calendar-dates">29</div>
+    <div class="calendar-dates">30</div>
+    <div class="calendar-dates">31</div>
+  </div>
+  </div>
+
+
+
+
+<div id="datebox" class="mydatebox">
+  <div class="datecontent">
+    <span class="closedate" onclick="closedata()">&times;</span>
+      <div class="machines">
+        <h4>Machine 21</h4>
+        <p>Machine 21 is scheduled for maintance at 14:00 today.</p>
+      </div>
+
+      <div class="machines">
+        <h4>Machine 18</h4>
+        <p>Machine 18 is scheduled for maintenance at 16:00 today.</p>
+
+      </div>
+
+  </div>
+
+</div>
+
+</div>
+
+  <!-- NOTE: maintenance report starter her -->
+  <div id="template">
+    <div class="report-header">
+      <h2>ID: <span id="rId"></span></h2>
+      <h2 id="rName">name</h2>
+      <div id="toggleHis">
+        toggle
+      </div>
+      <div id="close-report">
+        x
+      </div>
+    </div>
+    <div class="todo-wrapper">
+      <div class="basic-info">
+        <h3>Service</h3>
+        <h3>supervisor</h3>
+        <h3>workers</h3>
+        <h3>Files</h3>
+        <p id="rService"></p>
+        <p id="rSuper"></p>
+        <p id="rWorkers"></p>
+        <p id="rFiles"></p>
+      </div>
+      <div class="description">
+        <h3>Description</h3>
+        <p id="rDescription"></p>
+      </div>
+      <div id="checklist">
+        <h3>Checklist</h3>
+        <progress value="0" class="progressBar">0%</progress>
+        <div class="tasks">
+          <div class="task-div">
+            <label for="task1">Run diagnostics</label>
+            <input id="task1" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task2">Clean exterior</label>
+            <input id="task2" type="checkbox" class="task">
+
+          </div>
+          <div class="task-div">
+            <label for="task3">Clean interior</label>
+            <input id="task3" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task4">Lubricate mechanisms</label>
+            <input id="task4" type="checkbox" class="task">
+          </div>
+          <div class="task-div">
+            <label for="task5">Change oil</label>
+            <input id="task5" type="checkbox" class="task">
+          </div>
+        </div>
+      </div>
+      <div class="comm-add">
+        <div class="comment">
+          <h3>Comment</h3>
+          <textarea name="comment" rows="8" cols="80"></textarea>
+        </div>
+        <div class="files">
+          <h3>Add Files/Photos</h3>
+          <div class="addFiles">
+
+          </div>
+        </div>
+        <button data-modal-target="#modal" type="button">Done</button>
+      </div>
+    </div>
+    <div class="his-wrapper">
+      <table id="his-table">
+        <tr>
+          <th>Date of Service</th>
+          <th>Worker</th>
+          <th>Task completion</th>
+          <th>documentation</th>
+        </tr>
+        <tr>
+          <td id="hisLast"></td>
+          <td>Klaus Stenstrup</td>
+          <td>100%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>01-11-2019</td>
+          <td>Hans E. Christensen</td>
+          <td>100%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>04-06-2019</td>
+          <td>Klaus Stenstrup</td>
+          <td>90%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17-03-2019</td>
+          <td>Hans E. Christensen</td>
+          <td>100%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>06-12-2018</td>
+          <td>Lise Jørgensen</td>
+          <td>100%</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="hidden" class="d-none">
+      default
+    </div>
+    <div class="modal" id="modal">
+
+      <div class="modalheader">
+        <div class="overskrift">Eksempel</div>
+      </div>
+      <img class="jobsdoneicon" src="media/thanku.png" alt="">
+      <div class="modalbody">
+        Your data has been stored!
+        <br>
+        Have a great day, anon!
+      </div>
+
+      <button data-close-button class="close">You too</button>
+
+    </div>
+
+    <div id="overlay"></div>
+  </div>
+</body>
+
+</html>
