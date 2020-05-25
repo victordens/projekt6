@@ -1,0 +1,125 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica;
+  color:#333;
+}
+
+.black-bg {
+  background-color: #333;
+}
+
+.header {
+width: 100%;
+height: 50px;
+}
+
+.logo{
+  height: 40px;
+}
+
+.navigation-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation-list li{
+  float: left;
+}
+
+.navigation-list li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 3px;
+}
+li a:hover {
+  background-color: #444;
+
+}
+
+.fas {
+  font-size: 30px;
+  padding: 7px;
+}
+.navigation-list p  {
+  padding: 12px;
+}
+
+
+
+
+
+
+/*text spans*/
+
+/*colors*/
+
+/* trendy green, trendlog grøn*/
+.text-tg {
+  color: #5CB85C;
+}
+
+
+/*font*/
+
+.archi {
+font-family: 'Archivo Black', sans-serif;
+}
+
+
+
+/*tet alignemnt*/
+
+.t-a-center {
+  text-align: center;
+}
+
+.t.a.left {
+  text-align: left;
+}
+
+
+
+/*Margins*/
+.mt-1 {
+  margin-top: 1px;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+.mt-3 {
+  margin-top: 3px;
+}
+
+.mt-4{
+  margin-top: 4px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+.mt-7 {
+  margin-top: 7px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+
+
+
+
+/*Icons*/
+
+.icons-g{
+  width:100%;
+  border:1px
+  solid #cccccc;"
+}
