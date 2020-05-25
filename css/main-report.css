@@ -1,0 +1,46 @@
+#template {
+  position: absolute;
+  margin-top: 170px;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  width: 75%;
+}
+.todo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.basic-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.comm-add {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.report-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.checklist {
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.his-wrapper {
+  display: none;
+}
+
+.his-table {
+  width: 100%;
+}
