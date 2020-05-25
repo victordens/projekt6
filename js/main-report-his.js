@@ -30,3 +30,10 @@ function toggleCal () {
     calendarView[0].style.display = "none";
   }
 }
+
+let calClose = document.getElementById('closeCalDiv');
+calClose.addEventListener("click", closeCalendar);
+
+function closeCalendar() {
+ calendarView[0].style.display = "none";
+};

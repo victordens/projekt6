@@ -21,6 +21,7 @@ closeModalButtons.forEach(button => {
     const modal = button.closest('.modal')
     closeModal(modal)
     resetTasks()
+    resetTextArea()
   })
 })
 
@@ -43,6 +44,10 @@ function resetTasks(){
   document.getElementById("task4").checked = false;
   document.getElementById("task5").checked = false;
   init();
+}
+function resetTextArea(){
+  let ta= document.getElementById('comment-ta')
+  ta.value = ta.defaultValue;
 }
 
 function init () {

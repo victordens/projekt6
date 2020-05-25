@@ -37,10 +37,13 @@ function replace() {
   worker.innerHTML= reportArray [arrayPick] [5] [0] + "<br>" + reportArray [arrayPick] [5] [1] + "<br>" + reportArray [arrayPick] [5] [2];
   description.innerHTML= reportArray [arrayPick] [6];
   hisLastService.innerHTML= reportArray [arrayPick] [3];
+  resetTextArea()
 }
 
 function showMainRep() {
   let mainRep = document.getElementById("template");
+  let functionBar = document.getElementsByClassName('settings');
+  functionBar[0].style.display = "none";
   if (mainRep.style.display === "none") {
     mainRep.style.display = "block";
   }
@@ -62,7 +65,10 @@ function closeRep() {
     document.getElementById("task4").checked = false;
     document.getElementById("task5").checked = false;
     init();
+    resetTextArea()
     mainRep.style.display = "none";
+    let functionBar = document.getElementsByClassName('settings');
+    functionBar[0].style.display = "grid";
 }
 
 
@@ -136,3 +142,80 @@ function show055() {
   replace();
   showMainRep();
 }
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+    resetTasks()
+    resetTextArea()
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return           // if else er missing fordi vinduet skal poppe op uanset
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+function resetTasks(){
+  document.getElementById("task1").checked = false;
+  document.getElementById("task2").checked = false;
+  document.getElementById("task3").checked = false;
+  document.getElementById("task4").checked = false;
+  document.getElementById("task5").checked = false;
+  init();
+}
+function resetTextArea(){
+  let ta= document.getElementById('comment-ta')
+  ta.value = ta.defaultValue;
+}
+
+function init () {
+    let value = 0;
+
+    setProgression();
+}
+
+
+function setProgression() {
+    const tasks = Array.from(document.querySelectorAll('.task'));
+    const progressBar = document.querySelector('.progressBar');
+
+    // Set max value to the progress bar
+    const max = 100;
+    progressBar.setAttribute('max', max);
+
+    tasks.forEach(task => task.addEventListener('click', function() {
+        const tasksChecked = tasks.filter(task => task.checked);
+        // Set current value to the progress bar
+        const value  = (tasksChecked.length / tasks.length) * 100
+        progressBar.setAttribute('value', value)
+    }))
+}
+
+
+window.onload = init();
