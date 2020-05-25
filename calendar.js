@@ -35,7 +35,7 @@ function previousyear() {
 function nextmonth() {
   let thismonth = document.getElementById("month").innerHTML;
 
-
+// -------- For loop running through months array to check which month it is ---------//
   let month_index = 0
   for (let i = 0; i < 12; i++){
     if (months[i] === thismonth) {
@@ -44,7 +44,7 @@ function nextmonth() {
     }
   }
 
-// -------- Making the calendar go back to January at end of yaer ---------//
+// -------- Making the for loop restart at end of year ---------//
 
   const nextmonth = (month_index + 1) % months.length;
   console.log({nextmonth, months});
@@ -56,6 +56,7 @@ function nextmonth() {
 function previousmonth() {
   let thismonth = document.getElementById("month").innerHTML;
 
+// -------- For loop running through months array to check which month it is ---------//
 
   let month_index = 0
   for (let i = 0; i < 12; i++){
@@ -64,6 +65,8 @@ function previousmonth() {
       break;
     }
   }
+
+// --------  ---------//
 
   let nextmonth = 0
   if (month_index - 1 < 0){
