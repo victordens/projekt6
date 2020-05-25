@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f47fcebf42.js" crossorigin="anonymous"></script>
 
-
+  <link rel="stylesheet" href="styleguide/styleguide.css">
   <link rel="stylesheet" href="css/listoverview.css">
   <link rel="stylesheet" href="css/main-report.css">
   <link rel="stylesheet" href="css/modal2.css">
@@ -15,7 +15,7 @@
 
   <script src="js/main-report-his.js" defer></script>
   <script src="js/hide.js" defer></script>
-  
+
   <link rel="stylesheet" href="css/calendar.css">
   <script src="js/calendar.js" defer></script>
 
@@ -27,8 +27,17 @@
 
 <body>
 
-  <header class="header-class">
-    iam a big fat navigationbar
+  <header class="black-bg header">
+
+  <ul class="navigation-list">
+  <li><a href="styleguide.html"><img class="logo" src="media/logo60.png" alt=""></a></li>
+  <li> <a href="#"> <i class="fas fa-home"></i></a></li>
+  <li><a href="#"><p>Trendboard</p></a></li>
+  <li><a href="#"><p>Reports</p></a></li>
+  <li><a href="#"><p>Informations</p></a></li>
+  <li><a href="#"><p>Maintenance</p></a></li>
+  </ul>
+
   </header>
 
   <div id="mobilewrapper" class="mobilewrapper">
@@ -149,7 +158,7 @@
       <div class="settings">
 
         <div class="view-all">
-          <p>View all resources</p> <i class="fas fa-toggle-off"></i>
+          <p>All resources</p> <i class="fas fa-toggle-off" title="This feature is sadly not included in this prototype"></i>
 
         </div>
 
@@ -164,20 +173,24 @@
         <div class="entries-wrapper">
           <p>Show</p>
           <select>
-
+          <option value="1">1</option>
+          <option value="2">2</option>
           </select>
           <p>entries</p>
         </div>
         <div class="resource-wrapper">
           <p>Resource Type</p>
           <select class="show">
-            <p>1</p>
+            <option value="all">All</option>
+            <option value="machine">Machine</option>
+            <option value="robot">Robot</option>
+
           </select>
 
         </div>
 
         <div class="search-wrapper">
-          <input id="search-input" class="form-control" type="text">
+          <input id="search-input" type="text">
           <i class="fas fa-search"></i>
         </div>
 
@@ -189,14 +202,14 @@
     <div class="table-wrapper">
       <table id="table1" class="table table-striped">
         <tr class="bg-info">
-          <th class="bg-info" data-colname="id" data-order="desc">ID &#9650;</th>
-          <th data-colname="name" data-order="desc">Name &#9650;</th>
-          <th data-colname="yours" data-order="desc">Your resource &#9650;</th>
-          <th data-colname="in" data-order="desc"> In service &#9650;</th>
-          <th data-colname="next" data-order="desc"> Next service &#9650;</th>
-          <th data-colname="last" data-order="desc"> Last service &#9650;</th>
-          <th data-colname="rtype" data-order="desc">Resource type &#9650;</th>
-          <th data-colname="type" data-order="desc">Type &#9650;</th>
+          <th class="bg-info" data-colname="id" data-order="desc"><span class="white">ID</span>&#9650;</th>
+          <th data-colname="name" data-order="desc"><span class="white">Name</span> &#9650;</th>
+          <th data-colname="yours" data-order="desc"><span class="white">Your resource</span> &#9650;</th>
+          <th data-colname="in" data-order="desc"> <span class="white">In service</span> &#9650;</th>
+          <th data-colname="next" data-order="desc"> <span class="white">Next service</span> &#9650;</th>
+          <th data-colname="last" data-order="desc"> <span class="white">Last service</span> &#9650;</th>
+          <th data-colname="rtype" data-order="desc"><span class="white">Resource type</span> &#9650;</th>
+          <th data-colname="type" data-order="desc"><span class="white">Type</span> &#9650;</th>
         </tr>
         <tbody id="myTable">
 
@@ -218,30 +231,31 @@
     <div class="date-selectors">
 
       <div class="current-year">
-        <button name="previousyear" onclick="previousyear()"></button>
+        <button class="btn-c" name="previousyear" onclick="previousyear()"><i class="fas fa-sort-down"></i></button>
         <p id="year"></p>
-        <button name="nextyear" onclick="nextyear()"></button>
+        <button class="btn-c" name="nextyear" onclick="nextyear()"><i class="fas fa-sort-up"></i></button>
       </div>
 
       <div class="current-month">
-        <button name="previousmonth" onclick="previousmonth()"></button>
+        <button class="btn-c" name="previousmonth" onclick="previousmonth()"><i class="fas fa-sort-down"></i></button>
         <p id="month"></p>
-        <button name="nextmonth" type="button" onclick="nextmonth()"></button>
+        <button class="btn-c" name="nextmonth" type="button" onclick="nextmonth()"><i class="fas fa-sort-up"></i></button>
       </div>
-
+      <div class="luk-mig" id="closeCalDiv">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <div class="calendar-days t-a-center">
+      <div class="days"><p>Monday</p></div>
+      <div class="days"><p>Tuesday</p></div>
+      <div class="days"><p>Wednesday</p></div>
+      <div class="days"><p>Thursday</p></div>
+      <div class="days"><p>Friday</p></div>
+      <div class="days"><p>Saturday</p></div>
+      <div class="days"><p>Sunday</p></div>
     </div>
 
-
     <div class="calendar-container">
-      <div class="calendar-days">
-        <div class="days">Monday</div>
-        <div class="days">Tuesday</div>
-        <div class="days">Wednesday</div>
-        <div class="days">Thursday</div>
-        <div class="days">Friday</div>
-        <div class="days">Saturday</div>
-        <div class="days">Sunday</div>
-      </div>
 
       <div class="date-container">
         <div class="calendar-dates">01</div>
@@ -360,9 +374,7 @@
         <div class="calendar-dates">30</div>
         <div class="calendar-dates">31</div>
       </div>
-      <div id="closeCalDiv">
-        X
-      </div>
+
     </div>
 
 
@@ -374,12 +386,9 @@
         <div class="machines">
           <h4>Machine 21</h4>
           <p>Machine 21 is scheduled for maintance at 14:00 today.</p>
-        </div>
-
-        <div class="machines">
+          <br>
           <h4>Machine 18</h4>
           <p>Machine 18 is scheduled for maintenance at 16:00 today.</p>
-
         </div>
 
       </div>

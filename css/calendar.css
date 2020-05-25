@@ -1,57 +1,72 @@
 
 .calendar-showing {
   display: none;
-  height: 100%;
+  height: 500px;
   width: 75%;
   position: absolute;
   top: 170px;
   right: 0;
   background-color: #ffffff;
+  border-top: 2px solid #333;
 }
 
 .date-selectors {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  margin-left: 24px;
+}
+
+.luk-mig{
+  grid-column: 7/-1;
+  margin-left: 90px;
+  margin-top: 15px;
 }
 
 .current-year {
   display: inline-block;
 }
 
-button {
-  height: 10px;
-  width: 20px;
+.btn-c {
+  background-color: white;
+ border: none;
+ font-size: 16px;
+ cursor: pointer;
+ color:#337AB7;
 }
 
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  height: 30px;
   color: #fff;
 }
 
 .days {
-  background: #000;
+  background: #333;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
+  height: 35px;
+  font-weight: bold;
+}
+.days p {
+  margin-top: 8px;
 }
 
 .date-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  height: 70vh;
 }
 
+
+
 .calendar-dates {
-  background: #99EEff;
+  background: #DCE5EE;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .calendar-dates:hover {
-  background-color: #333;
+  background-color: #9ba2bb;
 }
 
 #thisday {
@@ -64,13 +79,13 @@ button {
 
 
 
-p {
+.calendar-dates p {
   margin: 0;
   margin-bottom: 10px;
 }
 
 .duenow {
-  background: green;
+  background: #5CB85C;
   width: 30%;
   display: inline-block;
   margin-left: 5px;
@@ -78,7 +93,7 @@ p {
 }
 
 .duesoon {
-  background: yellow;
+  background: #F0AD4E;
   width: 30%;
   display: inline-block;
   margin-left: 5px;
@@ -87,7 +102,7 @@ p {
 }
 
 .overdue {
-  background: red;
+  background:#D9534F;
   width: 30%;
   display: inline-block;
   margin-left: 5px;
@@ -95,7 +110,7 @@ p {
 }
 
 .duelong {
-  background: #005599;
+  background: #337AB7;
   width: 30%;
   display: inline-block;
   margin-left: 5px;
@@ -126,7 +141,7 @@ margin: 5px;
 /* Modal Content/Box */
 .datecontent {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;  15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -134,10 +149,12 @@ margin: 5px;
 
 /* The Close Button */
 .closedate {
-  color: #aaa;
+  color: #337AB7;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  padding-right: 10px;
+  padding-top: 3px;
 }
 
 .closedate:hover,
@@ -150,4 +167,7 @@ margin: 5px;
 
 .machines {
   border-color: #000;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 30px;
 }
