@@ -1,9 +1,9 @@
 
 // -------- Variables for getting current date/month/year ---------//
 
-var today = new Date();
-var currentMonth = today.getMonth();
-var currentYear = today.getFullYear();
+const today = new Date();
+const currentMonth = today.getMonth();
+const currentYear = today.getFullYear();
 
 // -------- Getting the current month to display as text ---------//
 
@@ -17,7 +17,7 @@ document.getElementById("year").innerHTML = currentYear;
 // -------- Adding +1 to the current year ---------//
 
 function nextyear() {
-  var nextyear = document.getElementById("year").innerHTML;
+  let nextyear = document.getElementById("year").innerHTML;
   nextyear++;
   document.getElementById("year").innerHTML = nextyear;
 }
@@ -79,11 +79,11 @@ function previousmonth() {
 
 // -------- Open and close pop-up when pressing dates---------//
 
-var datebox = document.getElementById("datebox");
+const datebox = document.getElementById("datebox");
 
-var btn = document.getElementById("mybtn");
+const btn = document.getElementById("mybtn");
 
-var closedate = document.getElementsByClassName('closedate');
+const closedate = document.getElementsByClassName('closedate');
 
 function dayinfo() {
   datebox.style.display = "block";
