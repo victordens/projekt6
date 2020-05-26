@@ -86,6 +86,7 @@ display: flex;
   background: #DCE5EE;
   margin: 5px;
   border-radius: 2px;
+  height: 125px;
 }
 
 .calendar-dates:hover {
