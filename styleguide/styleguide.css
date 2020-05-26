@@ -10,15 +10,17 @@ body {
 
 .black-bg {
   background-color: #333;
+  font-weight: bold;
 }
 
 .header {
 width: 100%;
-height: 50px;
+height: 70px;
 }
 
 .logo{
-  height: 40px;
+  height: 38px;
+
 }
 
 .navigation-list{
@@ -30,6 +32,7 @@ height: 50px;
 
 .navigation-list li{
   float: left;
+  margin-top: 8px;
 }
 
 .navigation-list li a {
@@ -37,8 +40,18 @@ height: 50px;
   color: white;
   text-align: center;
   text-decoration: none;
-  padding: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 9px;
+  padding-top: 11px;
+
+
 }
+
+.navigation-list li a p {
+margin-right: 20px;
+}
+
 li a:hover {
   background-color: #444;
 
@@ -46,7 +59,7 @@ li a:hover {
 
 .fas {
   font-size: 30px;
-  padding: 7px;
+  padding: 5px;
 }
 .navigation-list p  {
   padding: 12px;
@@ -62,11 +75,56 @@ li a:hover {
 /*colors*/
 
 /* trendy green, trendlog grøn*/
-.text-tg {
+.text-tg  {
   color: #5CB85C;
 }
 
 
+
+
+/* NOTE: ICONS */
+
+td  i .fa-wrench{
+color: #5CB85C;
+margin-left: 20%;
+}
+
+td i .fa-toggle-off{
+color: #5CB85C;
+margin-left: 5%;
+}
+
+.settings .fa-toggle-off{
+color: #5CB85C;
+margin-left: 5%;
+margin-top: 10px;
+}
+
+.settings .fa-wrench{
+color: #5CB85C;
+margin-left: 20%;
+}
+
+.settings .fa-calendar-alt {
+color: #5CB85C;
+margin-left: 5%;
+margin-top: 5px;
+}
+
+.table-wrapper td .fa-wrench{
+color: #5CB85C;
+margin-left: 20%;
+}
+
+.search-wrapper .fa-search {
+  font-size: 24px;
+  color: #337AB7;
+}
+
+.luk-mig .fa-times {
+  color:  #337AB7;
+  font-size: 30px;
+}
 /*font*/
 
 .archi {
@@ -123,3 +181,7 @@ font-family: 'Archivo Black', sans-serif;
   border:1px
   solid #cccccc;"
 }
+
+
+
+/* NOTE: rapport div */
