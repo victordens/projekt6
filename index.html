@@ -228,6 +228,10 @@
 
   <div class="calendar-showing">
 
+    <div class="calendar-wrapper">
+
+
+
     <div class="date-selectors">
 
       <div class="current-year">
@@ -258,14 +262,14 @@
     <div class="calendar-container">
 
       <div class="date-container">
-        <div class="calendar-dates">01</div>
-        <div class="calendar-dates">02</div>
-        <div class="calendar-dates">03</div>
-        <div class="calendar-dates">04</div>
-        <div class="calendar-dates">05</div>
-        <div class="calendar-dates">06</div>
-        <div class="calendar-dates">07</div>
-        <div class="calendar-dates">08</div>
+        <div class="calendar-dates"><p>1</p></div>
+        <div class="calendar-dates"><p>2</p></div>
+        <div class="calendar-dates"><p>3</p></div>
+        <div class="calendar-dates"><p>4</p></div>
+        <div class="calendar-dates"><p>5</p></div>
+        <div class="calendar-dates"><p>6</p></div>
+        <div class="calendar-dates"><p>7</p></div>
+        <div class="calendar-dates"><p>8</p></div>
         <div class="calendar-dates">
           <p>9</p>
           <div class="overdue">
@@ -307,8 +311,8 @@
 
           </div>
         </div>
-        <div class="calendar-dates">13</div>
-        <div class="calendar-dates">14</div>
+        <div class="calendar-dates"><p>13</p></div>
+        <div class="calendar-dates"><p>14</p></div>
         <div class="calendar-dates">
           <p>15</p>
           <div class="duelong">
@@ -361,18 +365,18 @@
 
           </div>
         </div>
-        <div class="calendar-dates">20</div>
-        <div class="calendar-dates">21</div>
-        <div class="calendar-dates">22</div>
-        <div class="calendar-dates">23</div>
-        <div class="calendar-dates">24</div>
-        <div class="calendar-dates">25</div>
-        <div class="calendar-dates">26</div>
-        <div class="calendar-dates">27</div>
-        <div class="calendar-dates">28</div>
-        <div class="calendar-dates">29</div>
-        <div class="calendar-dates">30</div>
-        <div class="calendar-dates">31</div>
+        <div class="calendar-dates"><p>20</p></div>
+        <div class="calendar-dates"><p>21</p></div>
+        <div class="calendar-dates"><p>22</p></div>
+        <div class="calendar-dates"><p>23</p></div>
+        <div class="calendar-dates"><p>24</p></div>
+        <div class="calendar-dates"><p>25</p></div>
+        <div class="calendar-dates"><p>26</p></div>
+        <div class="calendar-dates"><p>27</p></div>
+        <div class="calendar-dates"><p>28</p></div>
+        <div class="calendar-dates"><p>29</p></div>
+        <div class="calendar-dates"><p>30</p></div>
+        <div class="calendar-dates"><p>31</p></div>
       </div>
 
     </div>
@@ -395,6 +399,8 @@
 
     </div>
 
+    </div>
+
   </div>
 
   <!-- NOTE: maintenance report starter her -->
@@ -403,17 +409,17 @@
       <h2>ID: <span id="rId"></span></h2>
       <h2 id="rName">name</h2>
       <div id="toggleHis">
-        toggle
+      <p>History</p>  <i class="fas fa-toggle-off"></i>
       </div>
       <div id="close-report">
-        x
+        <i class="fas fa-times"></i>
       </div>
     </div>
     <div class="todo-wrapper">
       <div class="basic-info">
         <h3>Service</h3>
-        <h3>supervisor</h3>
-        <h3>workers</h3>
+        <h3>Supervisor</h3>
+        <h3>Workers</h3>
         <h3>Files</h3>
         <p id="rService"></p>
         <p id="rSuper"></p>
@@ -454,7 +460,7 @@
       <div class="comm-add">
         <div class="comment">
           <h3>Comment</h3>
-          <textarea name="comment" rows="8" cols="80" id="comment-ta"></textarea>
+          <textarea name="comment" rows="8" cols="40" id="comment-ta"></textarea>
         </div>
         <div class="files">
           <h3>Add Files/Photos</h3>

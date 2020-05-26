@@ -10,6 +10,12 @@
   border-top: 2px solid #333;
 }
 
+.calendar-wrapper{
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 14px;
+}
+
 .date-selectors {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -69,8 +75,13 @@
   background-color: #9ba2bb;
 }
 
+
 #thisday {
   background-color: lightgreen;
+}
+
+#thisday:hover{
+  cursor: pointer;
 }
 
 .machinebox {
@@ -80,8 +91,8 @@
 
 
 .calendar-dates p {
-  margin: 0;
-  margin-bottom: 10px;
+  margin-left: 6px;
+  margin-top: 4px;
 }
 
 .duenow {
