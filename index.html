@@ -6,7 +6,7 @@
   <title>Trendlog.io maintenance modul redesign</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f47fcebf42.js" crossorigin="anonymous"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styleguide/styleguide.css">
   <link rel="stylesheet" href="css/listoverview.css">
   <link rel="stylesheet" href="css/main-report.css">
@@ -386,7 +386,8 @@
 
     <div id="datebox" class="mydatebox">
       <div class="datecontent">
-        <span class="closedate" onclick="closedata()">&times;</span>
+        <h3>Thursday 06/11/2020   <span class="closedate" onclick="closedata()"><i class="fas fa-times"></i></span></h3>
+
         <div class="machines">
           <h4>Machine 21</h4>
           <p>Machine 21 is scheduled for maintance at 14:00 today.</p>
@@ -424,13 +425,16 @@
         <p id="rService"></p>
         <p id="rSuper"></p>
         <p id="rWorkers"></p>
-        <p id="rFiles"></p>
+        <p id="rFiles"> <i class="far fa-file-pdf"></i> Manual  <br> <i class="far fa-file-pdf"></i> Diagram</p>
       </div>
       <div class="description">
         <h3>Description</h3>
         <p id="rDescription"></p>
       </div>
-      <div id="checklist">
+
+      <div id="checklist" class="checklist-wrapper">
+
+      <div class="checklist">
         <h3>Checklist</h3>
         <progress value="0" class="progressBar">0%</progress>
         <div class="tasks">
@@ -457,18 +461,22 @@
           </div>
         </div>
       </div>
+<div class="button-wrapper">
+  <button class="btn-g" data-modal-target="#modal" type="button">Done</button>
+</div>
+  </div>
       <div class="comm-add">
         <div class="comment">
           <h3>Comment</h3>
-          <textarea name="comment" rows="8" cols="40" id="comment-ta"></textarea>
+          <textarea name="comment" rows="8" id="comment-ta"></textarea>
         </div>
         <div class="files">
           <h3>Add Files/Photos</h3>
           <div class="addFiles">
-
+            <i class="fas fa-upload"></i>
           </div>
         </div>
-        <button data-modal-target="#modal" type="button">Done</button>
+
       </div>
     </div>
     <div class="his-wrapper">
@@ -477,13 +485,13 @@
           <th>Date of Service</th>
           <th>Worker</th>
           <th>Task completion</th>
-          <th>documentation</th>
+          <th>Documentation</th>
         </tr>
         <tr>
           <td id="hisLast"></td>
           <td>Klaus Stenstrup</td>
           <td>100%</td>
-          <td></td>
+          <td> <i class="fas fa-paperclip"></i> <a href="#">Se more</a></td>
         </tr>
         <tr>
           <td>01-11-2019</td>
@@ -517,8 +525,9 @@
     <div class="modal" id="modal">
 
       <div class="modalheader">
-        <div class="overskrift">Eksempel</div>
+        <div class="overskrift">Jobs done</div>
       </div>
+
       <img class="jobsdoneicon" src="media/thanku.png" alt="">
       <div class="modalbody">
         Your data has been stored!

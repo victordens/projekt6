@@ -103,11 +103,11 @@ function buildTable(data){
 }
 
 
-if ($(window).width() < 400) {
+if ($(window).width() < 475) {
 $("#desktopwrapper").hide();
 }
 
 
-if ($(window).width() > 400) {
+if ($(window).width() > 475) {
 $("#mobilewrapper").hide();
 }

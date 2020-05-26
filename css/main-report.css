@@ -7,6 +7,7 @@
   width: 75%;
   border-top: 2px solid #333;
   border-left: 2px solid #333;
+  height: 700px;
 }
 .todo-wrapper {
   display: grid;
@@ -14,6 +15,8 @@
   margin-left: 14px;
   margin-top: 14px;
 }
+
+
 
 .basic-info {
   display: grid;
@@ -35,9 +38,16 @@
   border-right: solid 2px #333;
 
 
+
 }
 .basic-info p {
   margin-left: 8px;
+}
+
+.fa-file-pdf {
+  font-size: 40px;
+  margin-bottom: 24px;
+  color: #5CB85C;
 }
 
 .comm-add {
@@ -63,6 +73,7 @@
 }
 #toggleHis .fa-toggle-off {
   padding: 0;
+  color: #5CB85C;
 }
 
 #toggleHis p {
@@ -78,11 +89,14 @@ margin-right: 14px;
   padding: 0;
 display: flex;
 float:right;
+color: #337AB7;
+cursor: pointer;
 
 }
 
 .description{
   background-color: #DCE5EE;
+    margin-right: 14px;
 }
 
 .description h3 {
@@ -93,21 +107,28 @@ float:right;
   font-weight: bold;
   height: 35px;
   padding-left: 8px;
+  padding-top: 6px;
 }
 
 .description p {
   margin-left: 8px;
   padding-top: 16px;
   padding-bottom: 16px;
+
 }
 
-#checklist {
+#checklist{
+  display: grid;
+  grid-template-rows:  minmax(min-content, max-content)  minmax(min-content, max-content);
+}
+
+.checklist {
   margin-top: 24px;
   background-color: #DCE5EE;
-  width: 95%;
+  width: 97%;
 }
 
-#checklist h3 {
+.checklist h3 {
   display: block;
   background-color: #333;
   color: white;
@@ -116,9 +137,10 @@ float:right;
   height: 35px;
   padding-left: 8px;
   width: 100%;
+  padding-top: 6px;
 }
 
-progress {
+progress  {
   width: 100%;
   height: 24px;
 }
@@ -134,6 +156,77 @@ padding-right: 8px;
   background: #FFF;
 }
 
+.btn-g {
+ display: flex;
+ float: right;
+ margin-right: 26px;
+ margin-top: 24px;
+ padding-left: 24px;
+ padding-right: 24px;
+ padding-top: 6px;
+ padding-bottom: 6px;
+ border: none;
+ background-color: #5CB85C;
+ color: #fff;
+ border-radius: 2px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.com-add {
+    margin-right: 14px;
+}
+
+.comment {
+  display: block;
+  background-color: #333;
+  color: white;
+  border-radius: 2px;
+  font-weight: bold;
+  height: 35px;
+  padding-left: 8px;
+  margin-top: 24px;
+  margin-right: 14px;
+  padding-top: 6px;
+
+}
+.comment textarea {
+  margin-top: 12px;
+  margin-left: 0;
+  background-color: #DCE5EE;
+  border: none;
+  width:  100%;
+}
+
+.files {
+  background-color: #DCE5EE;
+  margin-top: 148px;
+  height: 124px;
+  margin-right: 14px;
+}
+
+.files h3{
+
+  display: block;
+  background-color: #333;
+  color: white;
+  border-radius: 2px;
+  font-weight: bold;
+  height: 35px;
+  padding-left: 8px;
+  padding-top: 6px;
+
+
+}
+
+.fa-upload {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  margin-top: 12px;
+  color: #5CB85C;
+}
+
 .d-block {
   display: block;
 }
@@ -144,8 +237,16 @@ padding-right: 8px;
 
 .his-wrapper {
   display: none;
+  margin-left: 14px;
+  margin-top: 24px;
+  margin-right: 14px;
 }
 
 .his-table {
   width: 100%;
+
+}
+
+#his-table th {
+  color: white;
 }

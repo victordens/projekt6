@@ -3,18 +3,21 @@
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+  margin-top: 172px;
+  top: 336px;
+  left: 50%;
+  background-color: #DCE5EE;
+  width: 97%;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  height: 400px;
+  transform: translate(-0%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
   border-radius: 10px;
   /* Ligger boksen oven på de andre elementer på siden*/
   z-index: 10;
-  background-color: #ffffff;
-  width: 500px;
-  max-width: 80%;
+  margin-bottom: 24px;
 }
 
 .modal.active {
@@ -22,43 +25,61 @@
 }
 
 .modalheader {
-  padding: 10px 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #333333;
+  background-color: #333;
+  color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    height: 35px;
+    border-right: solid 2px #333;
+
+
 }
 
 .modalheader .overskrift {
-  font-size: 2em;
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
   font-weight: bold;
   font-family: helvetica;
   color: #ffffff;
+  text-align: center;
+  margin-left: 45.527%;
 }
 
  .close {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: #32cd32;
-  font-family: helvetica;
-  font-size: 1em;
-  font-weight: bold;
+   padding-left: 24px;
+   padding-right: 24px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   border: none;
+   background-color: #5CB85C;
+   color: #fff;
+   border-radius: 2px;
+   font-weight: bold;
+   cursor: pointer;
   position: fixed;
   left: 50%;
-  bottom: 0%;
+  margin-top: 20px;
   transform: translate(-50%, -50%);
 }
 
 .jobsdoneicon {
-  padding-top: 10px;
-  padding-left: 15%;
+  padding-top: 24px;
+  padding-left: 43.5%;
+
+
 }
 
 .modalbody {
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   text-align: center;
+  font-size: 18px;
 }
 
  #overlay {
