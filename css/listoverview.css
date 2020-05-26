@@ -43,6 +43,7 @@ th{
   grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr)minmax(min-content, 1fr);
   right: 0;
   margin-left: 20px;
+  align-items: center;
 
 }
 
