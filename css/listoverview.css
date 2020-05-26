@@ -40,7 +40,7 @@ th{
 
 .settings {
   display: grid;
-  grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content)minmax(min-content, max-content);
+  grid-template-columns: minmax(100px, max-content) minmax(100px, max-content) minmax(min-content, max-content) minmax(min-content, max-content)minmax(min-content, max-content);
   align-items: center;
   position: absolute;
   right: 48px;
