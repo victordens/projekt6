@@ -8,6 +8,7 @@
   right: 0;
   background-color: #ffffff;
   border-top: 2px solid #333;
+  border-left: 2px solid #333;
 }
 
 .calendar-wrapper{
@@ -28,9 +29,6 @@
   margin-top: 15px;
 }
 
-.current-year {
-  display: inline-block;
-}
 
 .btn-c {
   background-color: white;
