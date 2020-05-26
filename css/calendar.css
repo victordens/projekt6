@@ -29,6 +29,25 @@
   margin-top: 15px;
 }
 
+.current-year {
+float: left;
+display: flex;
+}
+
+#year {
+  display: flex;
+  align-items: center;
+}
+
+.current-month {
+  float: left;
+  display: flex;
+}
+
+#month {
+  display: flex;
+  align-items: center;
+}
 
 .btn-c {
   background-color: white;
