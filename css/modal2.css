@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: absolute;
+  margin-top: 172px;
+  top: 336px;
+  left: 50%;
+  background-color: #DCE5EE;
+  width: 97%;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  height: 400px;
+  transform: translate(-0%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  /* Ligger boksen oven på de andre elementer på siden*/
+  z-index: 10;
+  margin-bottom: 24px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modalheader {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    height: 35px;
+    border-right: solid 2px #333;
+
+
+}
+
+.modalheader .overskrift {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: helvetica;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 45.527%;
+}
+
+ .close {
+   padding-left: 24px;
+   padding-right: 24px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   border: none;
+   background-color: #5CB85C;
+   color: #fff;
+   border-radius: 2px;
+   font-weight: bold;
+   cursor: pointer;
+  position: fixed;
+  left: 50%;
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.jobsdoneicon {
+  padding-top: 24px;
+  padding-left: 43.5%;
+
+
+}
+
+.modalbody {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  font-size: 18px;
+}
+
+ #overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
