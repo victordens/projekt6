@@ -79,11 +79,10 @@ function previousmonth() {
 }
 
 
-// -------- Open and close pop-up when pressing dates---------//
+// -------- Open and close pop-up modal when pressing dates---------//
 
 const datebox = document.getElementById("datebox");
 
-const btn = document.getElementById("mybtn");
 
 const closedate = document.getElementsByClassName('closedate');
 
