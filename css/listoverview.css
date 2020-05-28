@@ -260,8 +260,19 @@ th {
 }
 
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 1400px) {
+  .settings {
+    right: 12px;
+    display: grid;
+    grid-template-columns: minmax(24px, max-content) minmax(24px, max-content) minmax(min-content, max-content) minmax(min-content, max-content)minmax(min-content, max-content);
+
   }
+
+  .cal-view, .entries-wrapper, .resource-wrapper, #search-input, .settings .fa-calendar-alt {
+    margin-left: 6px;
+  }
+ #search-input{
+   width: 60px;
+ }
+
 }

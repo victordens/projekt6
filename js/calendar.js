@@ -44,10 +44,9 @@ function nextmonth() {
     }
   }
 
-// -------- Making the for loop restart at end of year ---------//
+// -------- Making the for loop restart at end of year with the modulos and also shows the new month in HTML ---------//
 
   const nextmonth = (month_index + 1) % months.length;
-  console.log({nextmonth, months});
   document.getElementById("month").innerHTML = months[nextmonth];
 }
 
@@ -66,7 +65,8 @@ function previousmonth() {
     }
   }
 
-// --------  ---------//
+// -------- Making sure that the if the month array drops below January[0] go back to December [11] ---------//
+// -------- Also making sure that the months go back and now forward ---------//
 
   let nextmonth = 0
   if (month_index - 1 < 0){
@@ -75,16 +75,14 @@ function previousmonth() {
     nextmonth = month_index - 1
   }
 
-  console.log({nextmonth, months});
   document.getElementById("month").innerHTML = months[nextmonth];
 }
 
 
-// -------- Open and close pop-up when pressing dates---------//
+// -------- Open and close pop-up modal when pressing dates---------//
 
 const datebox = document.getElementById("datebox");
 
-const btn = document.getElementById("mybtn");
 
 const closedate = document.getElementsByClassName('closedate');
 
