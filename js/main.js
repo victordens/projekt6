@@ -110,4 +110,5 @@ $("#desktopwrapper").hide();
 
 if ($(window).width() > 475) {
 $("#mobilewrapper").hide();
+alert("Dette er et skole projekt.  Lavet af gruppe 12. MMD. 2 sem. eksamen  2020. UCL.")
 }
